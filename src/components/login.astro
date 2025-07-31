@@ -1,0 +1,16 @@
+---
+import "../style/global.css";
+
+import loratorio from "../assets/images.png";
+---
+
+<div class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 h-screen flex flex-col items-center justify-center">
+	<div class="flex flex-col justify-center items-center bg-white bg-opacity-90 rounded-lg shadow-lg p-8 max-w-md mx-auto">
+	<img src={loratorio.src} alt="logo oratorio" class="mb-4">
+	<input type="text" placeholder="Usuario" class="border p-2 rounded mb-4 w-full">	
+	<input type="password" placeholder="Contraseña" class="border p-2 rounded mb-4 w-full">
+	<button class="bg-emerald-600 text-white p-2 rounded-lg w-full font-bold cursor-pointer hover:bg-emerald-500">Ingresar</button>
+	</div>
+	<button class="bg-indigo-900 text-white p-2 rounded-lg mt-4 font-bold cursor-pointer hover:bg-indigo-800">Ver registro de asistencia</button>
+
+</div>
