@@ -1,0 +1,50 @@
+---
+import "../style/global.css";
+
+import loratorio from "../assets/images.png";
+---
+
+<script is:inline>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    const overlay = document.getElementById('overlay');
+    menu.classList.toggle('hidden');
+    overlay.classList.toggle('hidden');
+  }
+
+  function closeMenu() {
+    document.getElementById('menu').classList.add('hidden');
+    document.getElementById('overlay').classList.add('hidden');
+  }
+</script>
+
+<div class="min-h-screen bg-gradient-to-br from-purple-400 to-blue-600">
+    <header class="flex justify-between items-center p-4 bg-white px-4 py-3 shadow-md h-17">
+        <img src={loratorio.src} alt="Logo Oratorio" class="h-17"/>
+        <p class="font-semibold text-sm md:text-base">BIENVENIDO <span class="italic">_________</span>!</p>
+        <button onclick="toggleMenu()" class="text-black text-3xl hover:bg-gray-200 w-25 h-14 italic rounded-3xl border-1">MENU</button>
+    </header>
+    <div id="overlay" class="hidden fixed top-0 left-0 w-full h-full bg-black opacity-40 z-40" onclick="closeMenu()"></div>
+    <aside id="menu" class="hidden fixed top-0 right-0 w-64 h-full bg-black text-white p-6 z-50 shadow-lg">
+        <h2 class="text-xl font-bold mb-4 border-b border-white pb-2">Menu</h2>
+        <ul class="space-y-4"> 
+            <li><a href="/registroAsis" class="hover:text-purple-400">Control de Asistencia</a></li>
+            <li><a href="#" class="hover:text-purple-400">Registro de oratoriano</a></li>
+            <li><a href="#" class="hover:text-purple-400">Crear usuarios</a></li>
+            <li><a href="#" class="hover:text-purple-400">Crear talleres</a></li>
+            <li><a href="/dashboardMenu" class="hover:text-purple-400">Dashboard</a></li>
+            <li><a href="/" class="hover:text-purple-400">Cerrar sesion</a></li>
+        </ul>
+    </aside>
+    <main class="flex flex-col items-center pt-10 px-4">
+        <button class="bg-gray-200 px-4 py-1 rounded font-bold mb-8 shadow">Dashboard</button>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="w-60 h-36 bg-gray-300 rounded-xl shadow-inner"></div>
+            <div class="w-60 h-36 bg-gray-300 rounded-xl shadow-inner"></div>
+            <div class="w-60 h-36 bg-gray-300 rounded-xl shadow-inner"></div>
+            <div class="w-60 h-36 bg-gray-300 rounded-xl shadow-inner"></div>
+            <div class="w-60 h-36 bg-gray-300 rounded-xl shadow-inner"></div>
+            <div class="w-60 h-36 bg-gray-300 rounded-xl shadow-inner"></div>
+        </div>
+    </main>
+</div>

@@ -1,6 +1,20 @@
 ---
 import "../style/global.css";
+
+import loratorio from "../assets/images.png";
 ---
-<div>
+<div class="bg-gradient-to-br from-purple-400 to-blue-400 h-screen flex flex-col items-center pt-16 px-4">
+    <div class="flex flex-col items-center bg-white bg-opacity-90 rounded-xl shadow-lg p-6 w-full max-w-md mb-10">
+        <img src={loratorio.src} alt="Logo Oratorio" class="w-24 mb-3  rounded-4xl border-2 border-gray-300 shadow"/>
+        <p class="text-xl font-semibold text-gray-800 mb-4">Ingresar DIO</p>
+        <div class="flex w-full rounded-full border border-gray-300 overflow-hidden">
+            <input type="text" placeholder="Buscar DIO" class="px-4 py-2 w-full focus:outline-none"/>
+            <button class="bg-white text-purple-600 px-4 font-semibold hover:bg-purple-100">Buscar</button>
+        </div>
+    </div>
+    <div class="w-full max-w-5xl bg-gray-300 rounded-lg p-6 shadow-inner">
+        <p class="text-gray-700 text-center italic">Aqui puedes ver los DIO registrados.</p>
+    </div>
     miau
 </div>
+
